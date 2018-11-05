@@ -3,7 +3,7 @@
 <mapper namespace="com.bookLibrary.dao.BookNameMapper">
   <resultMap id="BaseResultMap" type="com.bookLibrary.bean.BookName">
     <id column="n_id" jdbcType="INTEGER" property="nId" />
-    <result column="b_name" jdbcType="VARCHAR" property="bName" />
+    <result column="n_name" jdbcType="VARCHAR" property="nName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    n_id, b_name
+    n_id, n_name
   </sql>
   <select id="selectByExample" parameterType="com.bookLibrary.bean.BookNameExample" resultMap="BaseResultMap">
     select
@@ -97,8 +97,8 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.bookLibrary.bean.BookName">
-    insert into book_name (n_id, b_name)
-    values (#{nId,jdbcType=INTEGER}, #{bName,jdbcType=VARCHAR})
+    insert into book_name (n_id, n_name)
+    values (#{nId,jdbcType=INTEGER}, #{nName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.bookLibrary.bean.BookName">
     insert into book_name
@@ -106,16 +106,16 @@
       <if test="nId != null">
         n_id,
       </if>
-      <if test="bName != null">
-        b_name,
+      <if test="nName != null">
+        n_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="nId != null">
         #{nId,jdbcType=INTEGER},
       </if>
-      <if test="bName != null">
-        #{bName,jdbcType=VARCHAR},
+      <if test="nName != null">
+        #{nName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -131,8 +131,8 @@
       <if test="record.nId != null">
         n_id = #{record.nId,jdbcType=INTEGER},
       </if>
-      <if test="record.bName != null">
-        b_name = #{record.bName,jdbcType=VARCHAR},
+      <if test="record.nName != null">
+        n_name = #{record.nName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -142,7 +142,7 @@
   <update id="updateByExample" parameterType="map">
     update book_name
     set n_id = #{record.nId,jdbcType=INTEGER},
-      b_name = #{record.bName,jdbcType=VARCHAR}
+      n_name = #{record.nName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -150,15 +150,15 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.bookLibrary.bean.BookName">
     update book_name
     <set>
-      <if test="bName != null">
-        b_name = #{bName,jdbcType=VARCHAR},
+      <if test="nName != null">
+        n_name = #{nName,jdbcType=VARCHAR},
       </if>
     </set>
     where n_id = #{nId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.bookLibrary.bean.BookName">
     update book_name
-    set b_name = #{bName,jdbcType=VARCHAR}
+    set n_name = #{nName,jdbcType=VARCHAR}
     where n_id = #{nId,jdbcType=INTEGER}
   </update>
 </mapper>

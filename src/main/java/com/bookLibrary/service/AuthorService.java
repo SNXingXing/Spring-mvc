@@ -11,7 +11,7 @@ public interface AuthorService  {
      * 添加作者方法
      * @return 结果
      */
-    boolean authorAdd();
+    boolean addAuthor(Author author);
 
     /**
      * 通过作者名字查询作者id

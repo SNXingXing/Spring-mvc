@@ -164,73 +164,73 @@ public class BookNameExample {
             return (Criteria) this;
         }
 
-        public Criteria andBNameIsNull() {
+        public Criteria andNNameIsNull() {
             addCriterion("b_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andBNameIsNotNull() {
+        public Criteria andNNameIsNotNull() {
             addCriterion("b_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBNameEqualTo(String value) {
-            addCriterion("b_name =", value, "bName");
+        public Criteria andNNameEqualTo(String value) {
+            addCriterion("b_name =", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameNotEqualTo(String value) {
-            addCriterion("b_name <>", value, "bName");
+        public Criteria andNNameNotEqualTo(String value) {
+            addCriterion("b_name <>", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameGreaterThan(String value) {
-            addCriterion("b_name >", value, "bName");
+        public Criteria andNNameGreaterThan(String value) {
+            addCriterion("b_name >", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameGreaterThanOrEqualTo(String value) {
-            addCriterion("b_name >=", value, "bName");
+        public Criteria andNNameGreaterThanOrEqualTo(String value) {
+            addCriterion("b_name >=", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameLessThan(String value) {
-            addCriterion("b_name <", value, "bName");
+        public Criteria andNNameLessThan(String value) {
+            addCriterion("b_name <", value, "nName");
             return (Criteria) this;
         }
 
         public Criteria andBNameLessThanOrEqualTo(String value) {
-            addCriterion("b_name <=", value, "bName");
+            addCriterion("b_name <=", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameLike(String value) {
-            addCriterion("b_name like", value, "bName");
+        public Criteria andNNameLike(String value) {
+            addCriterion("b_name like", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameNotLike(String value) {
-            addCriterion("b_name not like", value, "bName");
+        public Criteria andNNameNotLike(String value) {
+            addCriterion("n_name not like", value, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameIn(List<String> values) {
-            addCriterion("b_name in", values, "bName");
+        public Criteria andNNameIn(List<String> values) {
+            addCriterion("n_name in", values, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameNotIn(List<String> values) {
-            addCriterion("b_name not in", values, "bName");
+        public Criteria andNNameNotIn(List<String> values) {
+            addCriterion("n_name not in", values, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameBetween(String value1, String value2) {
-            addCriterion("b_name between", value1, value2, "bName");
+        public Criteria andNNameBetween(String value1, String value2) {
+            addCriterion("n_name between", value1, value2, "nName");
             return (Criteria) this;
         }
 
-        public Criteria andBNameNotBetween(String value1, String value2) {
-            addCriterion("b_name not between", value1, value2, "bName");
+        public Criteria andNNameNotBetween(String value1, String value2) {
+            addCriterion("n_name not between", value1, value2, "nName");
             return (Criteria) this;
         }
     }

@@ -135,4 +135,19 @@ public class Isbn {
     public void setNum(Integer num) {
         this.num = num;
     }
+
+    public Isbn() {
+    }
+
+    public Isbn(Integer isbnId, String isbn, Integer nId, Integer pId, Integer aId, Integer cId, Date publishtime, String edition) {
+        this.isbnId = isbnId;
+        this.isbn = isbn;
+        this.nId = nId;
+        this.pId = pId;
+        this.aId = aId;
+        this.cId = cId;
+        this.publishtime = publishtime;
+        this.edition = edition;
+        this.num = num;
+    }
 }

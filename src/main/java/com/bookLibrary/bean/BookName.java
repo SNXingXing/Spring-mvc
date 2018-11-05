@@ -13,12 +13,12 @@ public class BookName {
         this.nId = nId;
     }
 
-    public String getbName() {
+    public String getnName() {
         return nName;
     }
 
-    public void setbName(String bName) {
-        this.nName = bName == null ? null : bName.trim();
+    public void setnName(String nName) {
+        this.nName = nName == null ? null : nName.trim();
     }
 
     public BookName() {
