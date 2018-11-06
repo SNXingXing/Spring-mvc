@@ -42,16 +42,17 @@ public class MapperTest {
     @Test
     public void testBook() {
         //authorMapper.insertSelective(new Author(null,"猫腻"));
-        //bookNameMapper.insertSelective(new BookName(null,"将夜"));
+        bookNameMapper.insertSelective(new BookName(null,"斗罗大陆"));
         //publisherMapper.insertSelective(new Publisher(null,"起点中文网"));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date d = null;
         //这里会有一个异常，所以要用try catch捕获异常
-        try {
+        /*try {
             d = sdf.parse("2014-05-01");
         } catch (Exception e) {
             e.printStackTrace();
         }
         isbnMapper.insertSelective(new Isbn(null, "9787540584931", 3, 2, 3, 529, d, "第一版"));
+*/
     }
 }

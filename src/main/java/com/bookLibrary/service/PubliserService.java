@@ -2,6 +2,10 @@ package com.bookLibrary.service;
 
 import com.bookLibrary.bean.Publisher;
 
+/**
+ * @author star
+ * 出版社处理接口
+ */
 public interface PubliserService {
     /**
      * 插入出版社信息
