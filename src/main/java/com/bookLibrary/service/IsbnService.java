@@ -18,18 +18,17 @@ public interface IsbnService {
 
     /**
      * 修改书籍信息
-     * @param isbn_id
      * @param isbn
      * @return
      */
-    boolean updateIsbn(Long isbn_id ,Isbn isbn);
+    boolean updateIsbn(Isbn isbn);
 
     /**
      * 删除书籍信息
      * @param isbn_id
      * @return
      */
-    boolean deleteIsbn(Long isbn_id);
+    boolean deleteIsbn(Integer isbn_id);
 
     /**
      * 通过isbn号 查询isbn信息

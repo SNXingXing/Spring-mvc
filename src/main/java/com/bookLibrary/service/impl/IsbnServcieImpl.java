@@ -2,19 +2,20 @@ package com.bookLibrary.service.impl;
 
 import com.bookLibrary.bean.Isbn;
 import com.bookLibrary.service.IsbnService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class IsbnServcieImpl implements IsbnService {
     public boolean addIsbn(Isbn isbn) {
         return false;
     }
 
-    public boolean updateIsbn(Long isbn_id, Isbn isbn) {
+    public boolean updateIsbn(Isbn isbn) {
         return false;
     }
 
-    public boolean deleteIsbn(Long isbn_id) {
+    public boolean deleteIsbn(Integer isbn_id) {
         return false;
     }
 

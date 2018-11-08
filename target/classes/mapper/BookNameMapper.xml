@@ -86,6 +86,12 @@
     from book_name
     where n_id = #{nId,jdbcType=INTEGER}
   </select>
+  <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from book_name
+    where n_name = #{nName,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book_name
     where n_id = #{nId,jdbcType=INTEGER}

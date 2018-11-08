@@ -1,31 +1,39 @@
 package com.bookLibrary.bean;
 
 public class Category {
-    private Integer id;
+    private Integer cId;
 
-    private String name;
+    private String cName;
 
     public Integer getId() {
-        return id;
+        return cId;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.cId = id;
     }
 
     public String getName() {
-        return name;
+        return cName;
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.cName = name == null ? null : name.trim();
     }
 
     public Category() {
     }
 
     public Category(Integer id, String name) {
-        this.id = id;
-        this.name = name;
+        this.cId = id;
+        this.cName = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "cId=" + cId +
+                ", cName='" + cName + '\'' +
+                '}';
     }
 }

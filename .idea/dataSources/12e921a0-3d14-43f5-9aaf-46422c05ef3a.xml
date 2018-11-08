@@ -1109,14 +1109,14 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="243" name="b_name">
+    <column id="274" parent="243" name="n_name">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="275" parent="243" name="b_name">
-      <ColNames>b_name</ColNames>
+      <ColNames>n_name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
@@ -1126,7 +1126,7 @@
       <Primary>1</Primary>
     </key>
     <key id="277" parent="243" name="b_name">
-      <ColNames>b_name</ColNames>
+      <ColNames>n_name</ColNames>
       <UnderlyingIndexName>b_name</UnderlyingIndexName>
     </key>
     <column id="278" parent="244" name="p_id">
@@ -1235,16 +1235,21 @@
       <RefTableName>book_purchasebatch</RefTableName>
       <RefColNames>pb_id</RefColNames>
     </foreign-key>
-    <trigger id="296" parent="246" name="storeAdd">
+    <trigger id="296" parent="246" name="store_add">
       <SourceTextLength>125</SourceTextLength>
       <Turn>after-row</Turn>
       <Events>I</Events>
     </trigger>
-    <argument id="297" parent="248" name="iid">
+    <trigger id="297" parent="246" name="store_delete">
+      <SourceTextLength>121</SourceTextLength>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+    </trigger>
+    <argument id="298" parent="248" name="iid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
     </argument>
-    <argument id="298" parent="248" name="pid">
+    <argument id="299" parent="248" name="pid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </argument>

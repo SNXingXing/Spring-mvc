@@ -1,26 +1,44 @@
 package com.bookLibrary.service.impl;
 
 import com.bookLibrary.bean.BookName;
+import com.bookLibrary.dao.BookNameMapper;
 import com.bookLibrary.service.BookNameService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+/**
+ * @author star
+ */
+@Service
 public class BookNameServiceImpl implements BookNameService {
+
+
+    @Autowired
+    BookNameMapper bookNameMapper;
+
     public boolean addBookName(BookName bookName) {
-        return false;
+        int i = bookNameMapper.insertSelective(bookName);
+        return i > 0;
     }
 
-    public boolean updateBookName(Long n_id, BookName bookName) {
-        return false;
+    public boolean updateBookName(BookName bookName) {
+        int i = bookNameMapper.updateByPrimaryKey(bookName);
+        return i > 0;
     }
 
-    public boolean deleteBookName(Long n_id) {
-        return false;
+    public boolean deleteBookName(Integer n_id) {
+        int i = bookNameMapper.deleteByPrimaryKey(n_id);
+
+        return i > 0;
     }
 
-    public Long queryNid(String n_name) {
-        return null;
+    public BookName queryByName(String n_name) {
+        BookName bookName = bookNameMapper.selectByName(n_name);
+        return bookName;
     }
 
-    public String queryNName(Long n_id) {
-        return null;
+    public BookName queryByid(Integer n_id) {
+        BookName bookName = bookNameMapper.selectByPrimaryKey(n_id);
+        return bookName;
     }
 }

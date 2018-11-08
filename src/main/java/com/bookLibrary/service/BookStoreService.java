@@ -25,16 +25,15 @@ public interface BookStoreService {
 
     /**
      * 修改库存信息
-     * @param s_id
      * @param store
      * @return
      */
-    boolean updateStore(Long s_id ,Store store);
+    boolean updateStore(Store store);
 
     /**
      * 删除库存信息
      * @param s_id
      * @return
      */
-    boolean deleteStore(Long s_id);
+    boolean deleteStore(Integer s_id);
 }

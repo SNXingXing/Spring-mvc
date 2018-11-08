@@ -20,6 +20,8 @@ public interface BookNameMapper {
 
     BookName selectByPrimaryKey(Integer nId);
 
+    BookName selectByName(String nName);
+
     int updateByExampleSelective(@Param("record") BookName record, @Param("example") BookNameExample example);
 
     int updateByExample(@Param("record") BookName record, @Param("example") BookNameExample example);

@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bookLibrary.dao.CategoryMapper">
   <resultMap id="BaseResultMap" type="com.bookLibrary.bean.Category">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
+    <id column="c_id" jdbcType="INTEGER" property="cId" />
+    <result column="c_name" jdbcType="VARCHAR" property="cName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name
+    c_Id, c_Name
   </sql>
   <select id="selectByExample" parameterType="com.bookLibrary.bean.CategoryExample" resultMap="BaseResultMap">
     select
@@ -84,11 +84,17 @@
     select 
     <include refid="Base_Column_List" />
     from book_category
-    where id = #{id,jdbcType=INTEGER}
+    where c_id = #{cId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from book_category
+    where c_name = #{cName,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book_category
-    where id = #{id,jdbcType=INTEGER}
+    where c_id = #{cId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.bookLibrary.bean.CategoryExample">
     delete from book_category
@@ -97,25 +103,25 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.bookLibrary.bean.Category">
-    insert into book_category (id, name)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+    insert into book_category (c_id, c_name)
+    values (#{cId,jdbcType=INTEGER}, #{cName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.bookLibrary.bean.Category">
     insert into book_category
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
+      <if test="cId != null">
+        c_id,
       </if>
-      <if test="name != null">
-        name,
+      <if test="cName != null">
+        c_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
+      <if test="cId != null">
+        #{cId,jdbcType=INTEGER},
       </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
+      <if test="cName != null">
+        #{cName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -128,11 +134,11 @@
   <update id="updateByExampleSelective" parameterType="map">
     update book_category
     <set>
-      <if test="record.id != null">
-        id = #{record.id,jdbcType=INTEGER},
+      <if test="record.cId != null">
+        c_id = #{record.cId,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null">
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.cName != null">
+        c_name = #{record.cName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -141,8 +147,8 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update book_category
-    set id = #{record.id,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR}
+    set c_id = #{record.cId,jdbcType=INTEGER},
+      c_name = #{record.cName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -150,15 +156,15 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.bookLibrary.bean.Category">
     update book_category
     <set>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
+      <if test="cName != null">
+        c_name = #{cName,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where c_id = #{cId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.bookLibrary.bean.Category">
     update book_category
-    set name = #{name,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    set c_name = #{cName,jdbcType=VARCHAR}
+    where c_id = #{cId,jdbcType=INTEGER}
   </update>
 </mapper>

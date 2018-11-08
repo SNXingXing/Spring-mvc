@@ -17,30 +17,29 @@ public interface BookNameService {
 
     /**
      * 修改书名
-     * @param n_id 要修改的书名id
      * @param bookName 要改的内容
      * @return
      */
-    boolean updateBookName(Long n_id,BookName bookName);
+    boolean updateBookName(BookName bookName);
 
     /**
      * 删除书名
      * @param n_id 要删除的书名id
      * @return
      */
-    boolean deleteBookName(Long n_id);
+    boolean deleteBookName(Integer n_id);
 
     /**
      * 通过书名查询id
      * @param n_name 书名
      * @return
      */
-    Long  queryNid(String n_name);
+    BookName  queryByName(String n_name);
 
     /**
      * 通过id查询书名
      * @param n_id id
      * @return
      */
-    String queryNName(Long n_id);
+    BookName queryByid(Integer n_id);
 }
