@@ -65,5 +65,10 @@ public interface IsbnService {
      */
     List<Isbn> queryByBookName(String n_name);
 
+    /***
+     * 查询所有书籍
+     * @return
+     */
+    List<Isbn> selectAll();
 
 }

@@ -5,8 +5,13 @@
       <configuration>
         <fileset id="fileset" name="ApplicationContext" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/src/main/web/WEB-INF/dispatcherServlet-servlet.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Spring Application Context (2)" removed="false">
+          <dependency>web dispatcherServlet servlet context</dependency>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -16,7 +21,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/web" relative="/" />
+          <root url="file://$MODULE_DIR$/src/main/web" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />

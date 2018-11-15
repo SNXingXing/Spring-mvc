@@ -18,14 +18,14 @@ public interface AuthorService  {
      * @param a_name
      * @return
      */
-    Author queryAuthorId(String a_name);
+    Author queryByName(String a_name);
 
     /**
      * 通过作者id 查询作者名字
      * @param a_id
      * @return
      */
-    Author queryAuthorName(Integer a_id);
+    Author queryById(Integer a_id);
 
     /**
      * 通过作者id,删除作者

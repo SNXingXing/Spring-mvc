@@ -1,5 +1,6 @@
 package com.bookLibrary.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Isbn {
@@ -31,6 +32,7 @@ public class Isbn {
 
     //查询isbn信息的同时,查询分类信息
     private Category category;
+
 
     public Author getAuthor() {
         return author;
@@ -149,5 +151,22 @@ public class Isbn {
         this.publishtime = publishtime;
         this.edition = edition;
         this.num = num;
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat format=new SimpleDateFormat("YYYY年MM月dd日");
+        String format1 = format.format(this.publishtime);
+        return "Isbn{" +
+                "isbnId=" + isbnId +
+                ", isbn='" + isbn + '\'' +
+                ", nId=" + nId +
+                ", pId=" + pId +
+                ", aId=" + aId +
+                ", cId=" + cId +
+                ", publishtime=" + format1 +
+                ", edition='" + edition + '\'' +
+                ", num=" + num +
+                '}';
     }
 }

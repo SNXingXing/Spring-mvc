@@ -333,7 +333,7 @@ public class IsbnExample {
         }
 
         public Criteria andPIdEqualTo(Integer value) {
-            addCriterion("p_id =", value, "pId");
+            addCriterion("i.p_id =", value, "pId");
             return (Criteria) this;
         }
 

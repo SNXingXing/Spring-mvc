@@ -118,7 +118,7 @@
         <if test="distinct">
             distinct
         </if>
-        <include refid="Base_Column_List"/>
+        <include refid="WithElse_Column_List"/>
         FROM `book_isbn` AS i
         LEFT JOIN book_author AS a ON i.`a_id`=a.`a_id`
         LEFT JOIN book_category AS c ON i.`c_id`=c.`c_id`
@@ -149,7 +149,7 @@
         <if test="distinct">
             distinct
         </if>
-        <include refid="Base_Column_List"/>
+        <include refid="WithElse_Column_List"/>
         from book_isbn
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>

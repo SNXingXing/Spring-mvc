@@ -28,4 +28,12 @@ public class Publisher {
         this.pId = pId;
         this.pName = pName;
     }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "pId=" + pId +
+                ", pName='" + pName + '\'' +
+                '}';
+    }
 }

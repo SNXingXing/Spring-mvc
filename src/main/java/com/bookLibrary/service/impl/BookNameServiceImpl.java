@@ -22,23 +22,19 @@ public class BookNameServiceImpl implements BookNameService {
     }
 
     public boolean updateBookName(BookName bookName) {
-        int i = bookNameMapper.updateByPrimaryKey(bookName);
-        return i > 0;
+        return bookNameMapper.updateByPrimaryKey(bookName) > 0;
     }
 
     public boolean deleteBookName(Integer n_id) {
-        int i = bookNameMapper.deleteByPrimaryKey(n_id);
 
-        return i > 0;
+        return bookNameMapper.deleteByPrimaryKey(n_id) > 0;
     }
 
     public BookName queryByName(String n_name) {
-        BookName bookName = bookNameMapper.selectByName(n_name);
-        return bookName;
+        return bookNameMapper.selectByName(n_name);
     }
 
     public BookName queryByid(Integer n_id) {
-        BookName bookName = bookNameMapper.selectByPrimaryKey(n_id);
-        return bookName;
+        return bookNameMapper.selectByPrimaryKey(n_id);
     }
 }

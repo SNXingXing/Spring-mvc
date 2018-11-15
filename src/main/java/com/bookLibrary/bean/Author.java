@@ -30,4 +30,11 @@ public class Author {
         this.aName = aName;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "aId=" + aId +
+                ", aName='" + aName + '\'' +
+                '}';
+    }
 }

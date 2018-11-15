@@ -18,6 +18,7 @@ public interface IsbnMapper {
 
     List<Isbn> selectByExample(IsbnExample example);
 
+
     Isbn selectByPrimaryKeyWithElse(Integer isbnId);
 
     List<Isbn> selectByExampleWithElse(IsbnExample example);
